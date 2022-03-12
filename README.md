@@ -48,7 +48,6 @@ Dim Tables:
 
 ![alt text](https://github.com/mimoyer21/udacity-sparkifydb-redshift/blob/main/sparkify_data_erd.png?raw=true) 
 
-
 ## Example queries and results for song play analysis:
 (to be filled in with more examples later if desired)
 
