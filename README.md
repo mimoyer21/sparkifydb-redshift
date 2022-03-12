@@ -55,7 +55,7 @@ Dim Tables:
 Total number of song plays by all users during a given time period (in this case, 2018):
 ```sql
 select count(*) 
-from songplays sp 
+from songplay sp 
 join time t 
     on sp.start_time = t.start_time 
 where t.year = 2018;
