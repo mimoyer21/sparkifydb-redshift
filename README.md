@@ -9,9 +9,10 @@ queries to answer such questions.
 * create_tables.py: drops and creates the tables. Run this file to reset your (empty) tables before each time you run your ETL scripts. This db does a full drop and re-write of tables each refresh (could convert to incremental inserts for efficiency/cost savings if desired)
 * etl.py: loads S3 files (song_data and log_data) into staging tables and then loads transformed data into final tables
 * sql_queries.py: contains all of the sql queries, and is imported into the files above (those files run these queries)
-* dwh.cfg: this file is not included in the repo, but is needed to run this ETL. Create a 'dwh.cfg' file with your own AWS credentials to be able to run this ETL flow (must also have source song_data and log_data files)
+* dwh.cfg: this file is not included in the repo, but is needed to run this ETL. Create a 'dwh.cfg' file with your own AWS credentials to be able to run this ETL flow 
 * test.py: manually running this prints some metadata (which tables are in the db) + sample data from each table to enable you to check that db looks as expected after the flow runs
 * sparkify_data_erd.png: this is an image file that provides an easy-to-understand overview of the tables in the database. This image gets re-created each time the db is populated (via the etl.py script), so changes to the db will be reflected in this image
+* Note: this pipeline populates the DWH from locally stored source song_data and log_data files, so you must also have those (not included here) to run this ETL and populate your own DWH
 
 
 ## How to run the Python scripts to create and populate the Redshift database:
